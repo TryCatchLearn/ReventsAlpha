@@ -47,7 +47,7 @@ const NavBar = ({history}) => {
                 )}
 
                 {authenticated ? (
-                    <SignedInMenu profile={profile} signOut={handleLogout}/>
+                    <SignedInMenu profile={profile} signOut={handleLogout} auth={auth}/>
                 ) : (
                     <SignedOutMenu signIn={handleOpenModal} register={handleOpenModal}/>
                 )}

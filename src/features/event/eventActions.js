@@ -5,9 +5,8 @@ import {
   FETCH_EVENTS
 } from './eventConstants';
 import { toastr } from 'react-redux-toastr';
-import { asyncActionStart, asyncActionFinish } from '../async/asyncActions';
+import { asyncActionStart, asyncActionFinish, asyncActionError } from '../async/asyncActions';
 import { fetchSampleData } from '../../app/data/mockApi';
-import { asyncActionError } from '../async/asyncReducer';
 
 export const fetchEvents = events => {
   return {
