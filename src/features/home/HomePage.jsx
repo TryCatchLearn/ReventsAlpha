@@ -19,9 +19,10 @@ const HomePage = ({history}) => {
             alt='logo'
             style={{ marginBottom: 12 }}
           />
-          Re-vents
+          Revents Alpha
         </Header>
-        <Button onClick={() => history.push('/events')} size='huge' inverted>
+        <Header inverted sub content={'Experimental version of the Revents site using Alpha packages... there may be some bugs!'}/>
+        <Button onClick={() => history.push('/events')} size='huge' inverted style={{marginTop: 20}}>
           Get started
           <Icon name='right arrow' inverted />
         </Button>
