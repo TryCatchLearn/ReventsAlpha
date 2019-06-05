@@ -1,0 +1,1 @@
+export const GET_USER_EVENTS = 'GET_USER_EVENTS';

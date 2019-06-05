@@ -2,3 +2,5 @@ export const CREATE_EVENT = 'CREATE_EVENT';
 export const UPDATE_EVENT = 'UPDATE_EVENT';
 export const DELETE_EVENT = 'DELETE_EVENT';
 export const FETCH_EVENTS = 'FETCH_EVENTS';
+export const FETCH_MORE_EVENTS = 'FETCH_MORE_EVENTS';
+export const MORE_EVENTS = 'MORE_EVENTS';

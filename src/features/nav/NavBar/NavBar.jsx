@@ -1,23 +1,20 @@
-import React, {useCallback, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import {Menu, Container, Button} from 'semantic-ui-react';
-import {useSelector, useDispatch} from "react-redux";
+import {useSelector} from 'react-redux';
 import {NavLink, Link, withRouter} from 'react-router-dom';
 import {useFirebase} from 'react-redux-firebase';
 import SignedOutMenu from '../Menus/SignedOutMenu';
 import SignedInMenu from '../Menus/SignedInMenu';
-import {openModal} from '../../modals/modalActions';
 
 const NavBar = ({history}) => {
-    const dispatch = useDispatch();
     const firebase = useFirebase();
-    const auth = useSelector(state => state.firebase.auth);
-    const profile = useSelector(state => state.firebase.profile);
-    const handleOpenModal = useCallback(
-        (type) => dispatch(openModal(type)), [dispatch]
-    );
-    const handleLogout =  () => {
-        firebase.auth().signOut();
-        history.push('/')
+    const auth = useSelector(state => state.firebase.auth, []);
+
+    const handleLogout = () => {
+        firebase.auth().signOut().then(() => {
+            history.push('/');
+        });
+
     };
 
     const authenticated = auth.isLoaded && !auth.isEmpty;
@@ -28,7 +25,7 @@ const NavBar = ({history}) => {
                     <img src='/assets/logo.png' alt='logo'/>
                     Re-vents
                 </Menu.Item>
-                <Menu.Item as={NavLink} to='/events' name='Events'/>
+                <Menu.Item as={NavLink} exact to='/events' name='Events'/>
                 <Menu.Item as={NavLink} to='/test' name='Test'/>
                 {authenticated && (
                     <Fragment>
@@ -47,13 +44,13 @@ const NavBar = ({history}) => {
                 )}
 
                 {authenticated ? (
-                    <SignedInMenu profile={profile} signOut={handleLogout} auth={auth}/>
+                    <SignedInMenu signOut={handleLogout}/>
                 ) : (
-                    <SignedOutMenu signIn={handleOpenModal} register={handleOpenModal}/>
+                    <SignedOutMenu/>
                 )}
             </Container>
         </Menu>
     );
-}
+};
 
 export default withRouter(NavBar);

@@ -1,6 +1,8 @@
 import {toastr} from 'react-redux-toastr';
 import cuid from 'cuid';
 import {asyncActionError, asyncActionFinish, asyncActionStart} from '../async/asyncActions';
+import {GET_USER_EVENTS} from './userConstants';
+import firebase from '../../app/config/firebase';
 
 export const updateProfile = ({firebase}, user) => {
     return async (dispatch) => {
@@ -71,14 +73,152 @@ export const deletePhoto = ({firebase, firestore}, photo) =>
         }
     };
 
-export const setMainPhoto = ({firebase}, photo) =>
+export const setMainPhoto = ({firebase, firestore}, photo) =>
     async dispatch => {
+        const user = firebase.auth().currentUser;
+        const today = new Date();
+        let userDocRef = firestore.collection('users').doc(user.uid);
+        let eventAttendeeRef = firestore.collection('event_attendee');
         try {
-            return await firebase.updateProfile({
+            dispatch(asyncActionStart());
+            let batch = firestore.batch();
+
+            batch.update(userDocRef, {
                 photoURL: photo.url
             });
+
+            let eventQuery = await eventAttendeeRef
+                .where('userUid', '==', user.uid)
+                .where('eventDate', '>=', today);
+
+            let eventQuerySnap = await eventQuery.get();
+
+            console.log(eventQuerySnap);
+
+            for (let i=0; i<eventQuerySnap.docs.length; i++) {
+                let eventDocRef = await firestore
+                    .collection('events')
+                    .doc(eventQuerySnap.docs[i].data().eventId);
+                let event = await eventDocRef.get();
+                if (event.data().hostUid === user.uid) {
+                    batch.update(eventDocRef, {
+                        hostPhotoURL: photo.url,
+                        [`attendees.${user.uid}.photoURL`]: photo.url
+                    });
+                } else {
+                    batch.update(eventDocRef, {
+                        [`attendees.${user.uid}.photoURL`]: photo.url
+                    })
+                }
+            }
+            console.log(batch);
+            await batch.commit();
+            dispatch(asyncActionFinish());
         } catch (error) {
             console.log(error);
+            dispatch(asyncActionError());
             throw new Error('Problem setting main photo');
         }
     };
+
+export const goingToEvent = ({firebase, firestore}, event) =>
+    async (dispatch, getState) => {
+        const user = firebase.auth().currentUser;
+        const profile = getState().firebase.profile;
+        const attendee = {
+            going: true,
+            joinDate: firestore.FieldValue.serverTimestamp(),
+            photoURL: profile.photoURL || '/assets/user.png',
+            displayName: profile.displayName,
+            host: false
+        };
+        try {
+            await firestore.update(`events/${event.id}`, {
+                [`attendees.${user.uid}`]: attendee
+            });
+            await firestore.set(`event_attendee/${event.id}_${user.uid}`, {
+                eventId: event.id,
+                userUid: user.uid,
+                eventDate: event.date,
+                host: false
+            });
+            toastr.success('Success', 'You have signed up to the event');
+        } catch (error) {
+            console.log(error);
+            toastr.error('Oops', 'Problem signing up to the event');
+        }
+    };
+
+//TODO: this still contains the FieldValue.delete() bug so it will not remove the event from the reducer
+export const cancelGoingToEvent = ({firebase, firestore}, event) =>
+    async (dispatch) => {
+        const user = firebase.auth().currentUser;
+        try {
+            await firestore.update(`events/${event.id}`, {
+                [`attendees.${user.uid}`]: firestore.FieldValue.delete()
+            });
+            await firestore.delete(`event_attendee/${event.id}_${user.uid}`);
+            toastr.success('Success', 'You have removed yourself from the event');
+        } catch (error) {
+            console.log(error);
+            toastr.error('Oops', 'Something went wrong');
+        }
+    };
+
+
+//TODO: check to see if there is a way to preserve the data in ordered reducer when using RRF
+export const getUserEvents = (userUid, activeTab) => async (
+    dispatch,
+    getState
+) => {
+    dispatch(asyncActionStart());
+    const firestore = firebase.firestore();
+    const today = new Date(Date.now());
+    let eventsRef = firestore.collection('event_attendee');
+    let query;
+    switch (activeTab) {
+        case 1: // past events
+            query = eventsRef
+                .where('userUid', '==', userUid)
+                .where('eventDate', '<=', today)
+                .orderBy('eventDate', 'desc');
+            break;
+        case 2: // future events
+            query = eventsRef
+                .where('userUid', '==', userUid)
+                .where('eventDate', '>=', today)
+                .orderBy('eventDate');
+            break;
+        case 3: // hosted events
+            query = eventsRef
+                .where('userUid', '==', userUid)
+                .where('host', '==', true)
+                .orderBy('eventDate', 'desc');
+            break;
+        default:
+            query = eventsRef
+                .where('userUid', '==', userUid)
+                .orderBy('eventDate', 'desc');
+            break;
+    }
+
+    try {
+        let querySnap = await query.get();
+        let events = [];
+
+        for (let i = 0; i < querySnap.docs.length; i++) {
+            let evt = await firestore
+                .collection('events')
+                .doc(querySnap.docs[i].data().eventId)
+                .get();
+            events.push({ ...evt.data(), id: evt.id });
+        }
+
+        dispatch({ type: GET_USER_EVENTS, payload: { events } });
+
+        dispatch(asyncActionFinish());
+    } catch (error) {
+        console.log(error);
+        dispatch(asyncActionError());
+    }
+};

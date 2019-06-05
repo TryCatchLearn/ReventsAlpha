@@ -1,12 +1,15 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
 import { Menu, Button } from 'semantic-ui-react';
+import {openModal} from '../../modals/modalActions';
 
-const SignedOutMenu = ({ signIn, register }) => {
+const SignedOutMenu = () => {
+    const dispatch = useDispatch();
   return (
     <Menu.Item position='right'>
-      <Button onClick={() => signIn('LoginModal')} basic inverted content='Login' />
+      <Button onClick={() => dispatch(openModal('LoginModal'))} basic inverted content='Login' />
       <Button
-        onClick={() => register('RegisterModal')}
+        onClick={() => dispatch(openModal('RegisterModal'))}
         basic
         inverted
         content='Register'

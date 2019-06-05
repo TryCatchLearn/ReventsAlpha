@@ -1,8 +1,9 @@
 /*global google*/
-import React, {useState} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import React, {useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import {reduxForm, Field} from 'redux-form';
 import {useFirestoreConnect, useFirebase, useFirestore} from 'react-redux-firebase';
+import {initialize} from 'redux-form';
 import {geocodeByAddress, getLatLng} from 'react-places-autocomplete';
 import {
     composeValidators,
@@ -11,7 +12,7 @@ import {
     hasLengthGreaterThan
 } from 'revalidate';
 import {Form, Segment, Button, Grid, Header} from 'semantic-ui-react';
-import {createEvent, updateEvent} from '../eventActions';
+import {createEvent, updateEvent, cancelToggle} from '../eventActions';
 import TextInput from '../../../app/common/form/TextInput';
 import TextArea from '../../../app/common/form/TextArea';
 import SelectInput from '../../../app/common/form/SelectInput';
@@ -46,7 +47,13 @@ const EventForm = ({change, history, match: {params}, invalid, submitting, prist
     const [cityLatLng, setCityLatLng] = useState({});
     const [venueLatLng, setVenueLatLng] = useState({});
     useFirestoreConnect(`events/${params.id}`);
-    const initialValues = useSelector(state => state.firestore.ordered.events && state.firestore.ordered.events[0] || {});
+    const event = useSelector(state => (state.firestore.ordered.events && state.firestore.ordered.events.filter(e => e.id === params.id)[0]) || {});
+
+    useEffect(() => {
+        if (Object.keys(event).length > 0) {
+            dispatch(initialize('eventForm', event))
+        }
+    }, [dispatch, event]);
 
     const handleCitySelect = (selectedCity) => {
         geocodeByAddress(selectedCity)
@@ -63,20 +70,21 @@ const EventForm = ({change, history, match: {params}, invalid, submitting, prist
         geocodeByAddress(selectedVenue)
             .then(results => getLatLng(results[0]))
             .then(latlng => {
-                setVenueLatLng(latlng)
+                setVenueLatLng(latlng);
             })
             .then(() => {
                 change('venue', selectedVenue);
             });
     };
 
-    const handleFormSubmit = values => {
+    const handleFormSubmit = async values => {
         values.venueLatLng = venueLatLng;
-        if (initialValues.id) {
-            dispatch(updateEvent({firebase, firestore}, values));
+        if (event.id) {
+            dispatch(updateEvent({firestore}, values));
+            history.push(`/events/${event.id}`);
         } else {
-            dispatch(createEvent({firebase, firestore}, values));
-            history.push('/events');
+            let createdEvent = await dispatch(createEvent({firebase, firestore}, values));
+            history.push(`/events/${createdEvent.id}`);
         }
     };
 
@@ -142,6 +150,13 @@ const EventForm = ({change, history, match: {params}, invalid, submitting, prist
                         <Button onClick={history.goBack} type='button'>
                             Cancel
                         </Button>
+
+                        <Button
+                            onClick={() => dispatch(cancelToggle({firestore}, !event.cancelled, event.id))}
+                            type='button'
+                            floated='right'
+                            color={event.cancelled ? 'green' : 'red'}
+                            content={event.cancelled ? 'Reactivate event' : 'Cancel event'}/>
                     </Form>
                 </Segment>
             </Grid.Column>
@@ -149,4 +164,4 @@ const EventForm = ({change, history, match: {params}, invalid, submitting, prist
     );
 };
 
-export default reduxForm({form: 'eventForm', enableReinitialize: true, validate})(EventForm);
+export default reduxForm({form: 'eventForm', validate})(EventForm);

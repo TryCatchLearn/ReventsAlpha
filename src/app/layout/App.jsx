@@ -13,10 +13,12 @@ import HomePage from '../../features/home/HomePage';
 import TestComponent from '../../features/testarea/TestComponent';
 import ModalManager from '../../features/modals/ModalManager';
 import LoadingComponent from "./LoadingComponent";
+import {UserIsAuthenticated} from '../../features/auth/AuthWrapper';
+import NotFound from './NotFound';
 
 const App = () => {
-    const auth = useSelector(state => state.firebase.auth);
-    if (!auth.isLoaded && auth.isEmpty) return <LoadingComponent />
+    const auth = useSelector(state => state.firebase.auth, []);
+    if (!auth.isLoaded && auth.isEmpty) return <LoadingComponent />;
     return (
         <Fragment>
             <ModalManager/>
@@ -30,14 +32,14 @@ const App = () => {
                         <NavBar/>
                         <Container className='main'>
                             <Switch>
-                                <Route path='/events' component={EventDashboard}/>
+                                <Route exact path='/events' component={EventDashboard}/>
                                 <Route path='/test' component={TestComponent}/>
-                                <Route path='/event/:id' component={EventDetailedPage}/>
-                                <Route path='/manage/:id' component={EventForm}/>
-                                <Route path='/people' component={PeopleDashboard}/>
-                                <Route path='/profile/:id' component={UserDetailedPage}/>
-                                <Route path='/settings' component={SettingsDashboard}/>
-                                <Route path='/createEvent' component={EventForm}/>
+                                <Route path='/events/:id' component={EventDetailedPage}/>
+                                <Route path={['/manage/:id', '/createEvent']} component={UserIsAuthenticated(EventForm)}/>
+                                <Route path='/people' component={UserIsAuthenticated(PeopleDashboard)}/>
+                                <Route path='/profile/:id' component={UserIsAuthenticated(UserDetailedPage)}/>
+                                <Route path='/settings' component={UserIsAuthenticated(SettingsDashboard)}/>
+                                <Route component={NotFound} />
                             </Switch>
                         </Container>
                     </Fragment>

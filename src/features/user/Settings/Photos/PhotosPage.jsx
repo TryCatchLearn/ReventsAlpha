@@ -1,8 +1,7 @@
-import React, {useState, useEffect, Fragment, useCallback} from 'react';
+import React, {useState, useEffect, Fragment, useCallback, useMemo} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {useFirestoreConnect, useFirestore, useFirebase} from 'react-redux-firebase';
 import {
-    Image,
     Segment,
     Header,
     Divider,
@@ -19,20 +18,28 @@ import {
 import {toastr} from 'react-redux-toastr';
 import UserPhotos from './UserPhotos';
 
-const PhotosPage = (selector, deps) => {
-        //TODO: bug in the photos where it adds an extra photo to reducer
+const PhotosPage = () => {
         const dispatch = useDispatch();
         const firestore = useFirestore();
         const firebase = useFirebase();
 
+        const auth = useSelector(state => state.firebase.auth, []);
+
+        const userPhotosQuery = useMemo(() => ({
+            collection: 'users',
+            doc: auth.uid,
+            subcollections: [{collection: 'photos'}],
+            storeAs: 'photos'
+        }), [auth.uid]);
+
         // firestoreConnect equivalent
-        useFirestoreConnect(`users/${firebase.auth().currentUser.uid}/photos`);
+        useFirestoreConnect(userPhotosQuery);
 
         // mapstate equivalent
-        const auth = useSelector(state => state.firebase.auth);
-        const profile = useSelector(state => state.firebase.profile);
-        const loading = useSelector(state => state.async.loading);
-        const photos = useSelector(state => state.firestore.ordered[`users/${auth.uid}`]);
+
+        const profile = useSelector(state => state.firebase.profile, []);
+        const loading = useSelector(state => state.async.loading, []);
+        const photos = useSelector(state => state.firestore.ordered.photos, []);
 
         // actions equivalent
         const [files, setFiles] = useState([]);
@@ -79,11 +86,11 @@ const PhotosPage = (selector, deps) => {
         const handleSetMainPhoto = useCallback(
             async (photo) => {
                 try {
-                    await dispatch(setMainPhoto({firebase}, photo));
+                    await dispatch(setMainPhoto({firebase, firestore}, photo));
                 } catch (error) {
                     toastr.error('Oops', error.message);
                 }
-            }, [dispatch, firebase]
+            }, [dispatch, firebase, firestore]
         );
 
         return (
@@ -111,9 +118,9 @@ const PhotosPage = (selector, deps) => {
                         <Header sub color='teal' content='Step 3 - Preview & Upload'/>
                         {files.length > 0 && (
                             <Fragment>
-                                <Image
-                                    src={cropResult}
-                                    style={{minHeight: '200px', minWidth: '200px'}}
+                                <div
+                                    className='img-preview'
+                                    style={{minHeight: '200px', minWidth: '200px', overflow: 'hidden'}}
                                 />
                                 <Button.Group>
                                     <Button
@@ -141,6 +148,7 @@ const PhotosPage = (selector, deps) => {
                     profile={profile}
                     deletePhoto={handleDeletePhoto}
                     setMainPhoto={handleSetMainPhoto}
+                    loading={loading}
                 />
             </Segment>
         );
