@@ -4,7 +4,7 @@ import {format} from 'date-fns';
 import EventDetailedMap from './EventDetailedMap';
 
 const EventDetailedInfo = ({event}) => {
-    const [showMap, mapToggle] = useState(false);
+    const [showMap, setShowMap] = useState(false);
     return (
         <Segment.Group>
             <Segment attached='top'>
@@ -38,7 +38,7 @@ const EventDetailedInfo = ({event}) => {
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <Button
-                            onClick={() => mapToggle(!showMap)}
+                            onClick={() => setShowMap(!showMap)}
                             color='teal'
                             size='tiny'
                             content={showMap ? 'Hide Map' : 'Show Map'}

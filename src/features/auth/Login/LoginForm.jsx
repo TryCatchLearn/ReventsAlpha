@@ -7,7 +7,7 @@ import TextInput from '../../../app/common/form/TextInput';
 import {login, socialLogin} from '../authActions';
 import SocialLogin from "../SocialLogin/SocialLogin";
 
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({handleSubmit, error, submitting}) => {
     const dispatch = useDispatch();
     const firebase = useFirebase();
     const firestore = useFirestore();
@@ -37,7 +37,7 @@ const LoginForm = ({handleSubmit, error}) => {
                     placeholder='password'
                 />
                 {error && <Label basic color='red'>{error}</Label>}
-                <Button fluid size='large' color='teal'>
+                <Button loading={submitting} fluid size='large' color='teal'>
                     Login
                 </Button>
                 <Divider horizontal>

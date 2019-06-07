@@ -3,43 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="64d9e7f7-6596-4281-bac3-de20757ec0af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/common/util/ScrollToTop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/util/ScrollToTop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/common/util/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/util/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducers/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/async/asyncReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/async/asyncReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventActivity/EventActivity.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventActivity/EventActivity.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventDashboard/EventDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventDashboard/EventDashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedChat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedChat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/auth/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/Login/LoginForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedInfo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedSidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedSidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventForm/EventForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventForm/EventForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventList/EventList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventList/EventList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventList/EventListAttendee.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventList/EventListAttendee.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/EventList/EventListItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/EventList/EventListItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/eventActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/eventActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/eventConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/eventConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/event/eventReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/event/eventReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/modals/LoginModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/modals/LoginModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/modals/modalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/modals/modalReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/nav/Menus/SignedInMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/nav/Menus/SignedInMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/nav/Menus/SignedOutMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/nav/Menus/SignedOutMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/modals/ModalManager.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/modals/ModalManager.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/modals/UnatuhModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/modals/UnauthModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/nav/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/nav/NavBar/NavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/testarea/TestComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/testarea/TestComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/testarea/testActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/testarea/testActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/testarea/testReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/testarea/testReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/PeopleDashboard/PeopleDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/PeopleDashboard/PeopleDashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/Settings/Photos/CropperInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/Settings/Photos/CropperInput.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/Settings/Photos/PhotosPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/Settings/Photos/PhotosPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/Settings/Photos/UserPhotos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/Settings/Photos/UserPhotos.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedEvents.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedEvents.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedSidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedSidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/user/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/user/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,46 +24,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedPage.jsx">
+        <entry file="file://$PROJECT_DIR$/src/features/nav/NavBar/NavBar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/common/util/ScrollToTop.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="332">
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/features/event/EventActivity/EventActivityItem.jsx">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="49" column="2" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="319">
+              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/nav/NavBar/NavBar.jsx">
+        <entry file="file://$PROJECT_DIR$/src/features/nav/Menus/SignedInMenu.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            <state relative-caret-position="475">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,9 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/config/firebase.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedHeader.jsx" />
         <option value="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedDescription.jsx" />
         <option value="$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedPhotos.jsx" />
         <option value="$PROJECT_DIR$/src/features/home/HomePage.jsx" />
@@ -144,7 +97,6 @@
         <option value="$PROJECT_DIR$/src/features/event/EventActivity/EventActivity.jsx" />
         <option value="$PROJECT_DIR$/src/features/event/EventDashboard/EventDashboard.jsx" />
         <option value="$PROJECT_DIR$/src/features/event/EventForm/EventForm.jsx" />
-        <option value="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedHeader.jsx" />
         <option value="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedSidebar.jsx" />
         <option value="$PROJECT_DIR$/src/features/event/eventActions.js" />
         <option value="$PROJECT_DIR$/src/features/user/userActions.js" />
@@ -160,13 +112,17 @@
         <option value="$PROJECT_DIR$/src/features/user/Settings/Photos/PhotosPage.jsx" />
         <option value="$PROJECT_DIR$/src/features/modals/UnatuhModal.jsx" />
         <option value="$PROJECT_DIR$/src/features/auth/AuthWrapper.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/layout/NotFound.jsx" />
         <option value="$PROJECT_DIR$/src/app/layout/App.jsx" />
-        <option value="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedPage.jsx" />
         <option value="$PROJECT_DIR$/src/app/common/util/ScrollToTop.jsx" />
-        <option value="$PROJECT_DIR$/src/features/nav/NavBar/NavBar.jsx" />
         <option value="$PROJECT_DIR$/src/features/event/EventActivity/EventActivityItem.jsx" />
+        <option value="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedHeader.jsx" />
+        <option value="$PROJECT_DIR$/src/features/modals/ModalManager.jsx" />
+        <option value="$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedPage.jsx" />
+        <option value="$PROJECT_DIR$/src/features/auth/Login/LoginForm.jsx" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/features/nav/NavBar/NavBar.jsx" />
       </list>
     </option>
   </component>
@@ -194,67 +150,6 @@
             <path>
               <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
               <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="Register" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="modals" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="nav" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ReventsAlpha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReventsAlpha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="nav" type="462c0819:PsiDirectoryNode" />
-              <item name="NavBar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -318,12 +213,12 @@
       <workItem from="1559435036769" duration="16000" />
       <workItem from="1559564303692" duration="593000" />
       <workItem from="1559609529355" duration="2664000" />
-      <workItem from="1559702984106" duration="12200000" />
+      <workItem from="1559702984106" duration="16406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100328000" />
+    <option name="totallyTimeSpent" value="104534000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -336,9 +231,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16033755" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16033755" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -352,7 +246,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27807486" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27807486" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -362,30 +256,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/features/user/UserDetailed/UserDetailedDescription.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/home/HomePage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedInfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/event/eventConstants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -553,16 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedHeader.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedSidebar.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
@@ -587,16 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/user/userActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="93" column="56" lean-forward="true" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
@@ -664,31 +514,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/nav/Menus/SignedInMenu.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/auth/authActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/auth/Login/LoginForm.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -740,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/features/auth/AuthWrapper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -757,7 +580,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/modals/UnatuhModal.jsx">
+    <entry file="file://$PROJECT_DIR$/src/features/modals/UnauthModal.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
           <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
@@ -787,40 +610,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedPage.jsx">
+    <entry file="file://$PROJECT_DIR$/src/features/event/EventActivity/EventActivityItem.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        <state relative-caret-position="572">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/common/util/ScrollToTop.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="266">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/nav/NavBar/NavBar.jsx">
+    <entry file="file://$PROJECT_DIR$/src/features/user/userActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="-476">
+          <caret line="93" column="56" selection-start-line="93" selection-start-column="56" selection-end-line="93" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/event/EventActivity/EventActivityItem.jsx">
+    <entry file="file://$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedHeader.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/modals/ModalManager.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/event/EventDetailed/EventDetailedPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/auth/Login/LoginForm.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
-          <caret line="49" column="2" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase-debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/nav/Menus/SignedInMenu.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/nav/NavBar/NavBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Menu, Container, Button} from 'semantic-ui-react';
+import {Menu, Container, Button, Icon} from 'semantic-ui-react';
 import {useSelector} from 'react-redux';
 import {NavLink, Link, withRouter} from 'react-router-dom';
 import {useFirebase} from 'react-redux-firebase';
@@ -23,12 +23,12 @@ const NavBar = ({history}) => {
             <Container>
                 <Menu.Item as={Link} to='/' header>
                     <img src='/assets/logo.png' alt='logo'/>
-                    Re-vents
+                    Re-vents Alpha
                 </Menu.Item>
                 <Menu.Item as={NavLink} exact to='/events' name='Events'/>
-                <Menu.Item as={NavLink} to='/test' name='Test'/>
                 {authenticated && (
                     <Fragment>
+                        <Menu.Item as={NavLink} to='/test' name='Test'/>
                         <Menu.Item as={NavLink} to='/people' name='People'/>
                         <Menu.Item>
                             <Button
@@ -40,8 +40,13 @@ const NavBar = ({history}) => {
                                 content='Create Event'
                             />
                         </Menu.Item>
+
                     </Fragment>
                 )}
+                <Menu.Item position={'right'} as='a' href='https://github.com/TryCatchLearn/ReventsAlpha' target={'_blank'}>
+                    Report a Bug
+                    <Icon name={'bug'} size={'large'} style={{marginLeft: 5, color: 'orange'}}/>
+                </Menu.Item>
 
                 {authenticated ? (
                     <SignedInMenu signOut={handleLogout}/>
